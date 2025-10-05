@@ -1,6 +1,6 @@
 # NLPLite
 
-Lightweight NLP library for **fast AhoCorasick term extraction** and **enhanced NegEx engine for negation and uncertainty detection**.
+Lightweight NLP library for **fast concept extraction** and **enhanced negation and uncertainty detection**.
 
 ## Features
 
