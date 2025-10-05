@@ -26,7 +26,7 @@ pip install nlplite
 from nlplite import flash_extractor
 
 # Term to code dictionary
-dictionary = {"headache": "R51", "fever": "R50.9"}
+dictionary = {"headache": "C0018681", "fever": "C0015967"}
 
 extractor = flash_extractor(dictionary)
 text = "The patient denies headache but reports fever."
@@ -36,7 +36,14 @@ print(extractor.run(text, negation_check=True))
 
 **Output:**
 ```python
-[('headache:N', 'R51:N', 18, 25), ('fever:Y', 'R50.9:Y', 40, 44)]
+[('headache:N', 'C0018681:N', 18, 25), ('fever:Y', 'C0015967:Y', 40, 44)]
+```
+
+### Quick CLI 
+```bash
+printf "term,code\nfever,C0015967\nheadache,C0018681\n" > terms.csv
+printf "The patient denies headache but reports fever.\n" > note.txt
+flash-extract terms.csv note.txt --sep , --negation
 ```
 
 ### Structured JSONL-Style Record
@@ -52,8 +59,8 @@ print(rec)
   "note_id": "1234",
   "text": "The patient denies headache but reports fever.",
   "extractions": [
-    ["headache:N", "R51:N", 18, 25],
-    ["fever:Y", "R50.9:Y", 40, 44]
+    ["headache:N", "C0018681:N", 18, 25],
+    ["fever:Y", "C0015967:Y", 40, 44]
   ]
 }
 ```
@@ -69,15 +76,15 @@ Use when you want codes in the output (CUI/SNOMED/ICD etc)
 **Example CSV:**
 ```csv
 term,code
-fever,R50.9
-headache,R51
+fever,C0015967
+headache,C0018681
 ```
 
 **Example TSV:**
 ```tsv
 term	code
-fever	R50.9
-headache	R51
+fever	C0015967
+headache	C0018681
 ```
 
 **Loader:**
