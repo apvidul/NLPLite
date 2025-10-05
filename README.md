@@ -46,25 +46,6 @@ printf "The patient denies headache but reports fever.\n" > note.txt
 flash-extract terms.csv note.txt --sep , --negation
 ```
 
-### Structured JSONL-Style Record
-
-```python
-rec = extractor.extract_note("1234", text, negation_check=True)
-print(rec)
-```
-
-**Output:**
-```json
-{
-  "note_id": "1234",
-  "text": "The patient denies headache but reports fever.",
-  "extractions": [
-    ["headache:N", "C0018681:N", 18, 25],
-    ["fever:Y", "C0015967:Y", 40, 44]
-  ]
-}
-```
-
 ---
 
 ## Dictionary Formats
