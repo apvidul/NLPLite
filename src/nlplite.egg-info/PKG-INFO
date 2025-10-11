@@ -1,6 +1,18 @@
-# NLPLite ![PyPI Downloads](https://img.shields.io/pypi/dm/petehr)
+Metadata-Version: 2.4
+Name: nlplite
+Version: 0.2.0
+Summary: Fast lightweight NLP library for concept and segment extraction with negation/uncertainty detection.
+Author-email: Vidul Panickan <apvidul@gmail.com>
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyahocorasick
+Dynamic: license-file
 
-Fast lightweight NLP library for concept/sentence/paragraph with negation detection.
+# NLPLite
+
+Fast, lightweight NLP for concept extraction with sentence/paragraph segments and negation/uncertainty detection.
 
 ## Highlights
 
