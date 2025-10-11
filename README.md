@@ -1,4 +1,4 @@
-# NLPLite ![PyPI Downloads](https://img.shields.io/pypi/dm/petehr)
+# NLPLite ![PyPI Downloads](https://img.shields.io/pypi/dm/nlplite)
 
 Fast lightweight NLP library for concept/sentence/paragraph with negation detection.
 
