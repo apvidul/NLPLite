@@ -1,15 +1,14 @@
 # NLPLite ![PyPI Downloads](https://img.shields.io/pypi/dm/nlplite)
 
-Fast lightweight NLP library for concept/sentence/paragraph with negation detection.
+Fast lightweight NLP library for concept/sentence/paragraph extraction with negation detection.
 
 ## Highlights
 
-- **Fast string matching**: Aho–Corasick with a pure‑Python fallback in case C is not available.
-- **Whole‑word, case‑insensitive**: term matching with smart longest match capture.
+- **Fast case insensitive string match**: term matching with smart longest match capture.
 - **Negation & uncertainty**: term hits accompanied by negation status `:Y` (YES), `:N` (NO), `:U` (UNCERTAIN).
-- **Segment text**: return the sentence or paragraph containing each hit (or ±N chars around the term hit).
-- **Code mapping**: map terms to codes (ICD, SNOMED, CUIs, etc).
-- **Simple CLI**: one command to search, extract, convert codes, or get assertion status.
+- **Segment text**: return the sentence or paragraph containing terms/phrases of interest or ±N chars around the hit
+- **Code mapping**: map strings to codes using a backend dictionary (ICD, SNOMED, CUIs, etc).
+- **Simple CLI**: single command search, extract, convert codes, or get assertion status.
 
 ## Install
 
